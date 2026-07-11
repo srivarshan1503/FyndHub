@@ -2,7 +2,6 @@
 const cron = require('node-cron');
 const pool = require('./db');
 
-// Cron job to delete posts older than 24 hours
 function startCronJobs() {
     cron.schedule('* * * * *', async () => {
         try {

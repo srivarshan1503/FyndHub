@@ -47,7 +47,6 @@ const Home = () => {
 
     return (
         <div>
-            {/* Hero Section */}
             <div className="bg-blue-600 px-6 py-12 text-center">
                 <h1 className="text-white text-2xl font-semibold mb-2">
                     Find what you lost. Return what you found.
@@ -56,7 +55,6 @@ const Home = () => {
                     Search across all lost & found posts on campus
                 </p>
 
-                {/* Search Bar */}
                 <div className="flex max-w-xl mx-auto gap-2">
                     <input
                         type="text"

@@ -25,7 +25,7 @@ const Profile = () => {
         <div className="min-h-screen bg-gray-100 py-10 px-6">
             <div className="max-w-4xl mx-auto space-y-6">
 
-                {/* User Info Card */}
+
                 <div className="bg-white rounded-2xl shadow-sm p-6">
                     <div className="flex items-center gap-4">
                         <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
@@ -45,7 +45,6 @@ const Profile = () => {
                     </div>
                 </div>
 
-                {/* My Posts */}
                 <div>
                     <h3 className="text-lg font-semibold text-gray-800 mb-4">My Posts</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

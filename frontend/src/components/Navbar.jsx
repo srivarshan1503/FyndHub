@@ -13,12 +13,9 @@ const Navbar = () => {
 
     return (
         <nav className="bg-blue-700 px-6 py-3 flex items-center justify-between">
-            {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
                 <span className="text-white font-semibold text-lg">FyndHub</span>
             </Link>
-
-            {/* Links */}
             <div className="flex items-center gap-6">
                 <Link to="/" className="text-white text-sm opacity-90 hover:opacity-100">Home</Link>
                 {user ? (

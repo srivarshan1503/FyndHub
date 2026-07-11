@@ -18,10 +18,7 @@ const CreatePost = () => {
     const [error, setError] = useState('')
     const [coordinates, setCoordinates] = useState(null)
 
-    // if (!user) {
-    //     navigate('/login')
-    //     return null;
-    // }
+
 
     const handleChange = (e) => {
         setFormData({
@@ -102,7 +99,7 @@ const CreatePost = () => {
                         <MapPicker onLocationSelect={handleLocationSelect} />
                         {coordinates && (
                             <p className="text-xs text-green-600 mt-1">
-                                📍 Location selected: {coordinates.lat.toFixed(4)}, {coordinates.lng.toFixed(4)}
+                                Location selected: {coordinates.lat.toFixed(4)}, {coordinates.lng.toFixed(4)}
                             </p>
                         )}
                     </div>

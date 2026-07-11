@@ -73,9 +73,9 @@ const PostDetail = () => {
         <div className="min-h-screen bg-gray-100 py-10 px-6">
             <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
 
-                {/* Left - Post Details */}
+
                 <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-                    {/* Image */}
+
                     <div className={`h-56 flex items-center justify-center ${post.type === 'lost' ? 'bg-red-50' : 'bg-green-50'}`}>
                         {post.image_url ? (
                             <img src={post.image_url} alt={post.title} className="h-full w-full object-cover" />
@@ -136,14 +136,14 @@ const PostDetail = () => {
                     </div>
                 </div>
 
-                {/* Right - Chat */}
+
                 <div className="bg-white rounded-2xl shadow-sm flex flex-col h-[500px]">
                     <div className="px-6 py-4 border-b border-gray-100">
                         <h3 className="text-base font-semibold text-gray-800">Anonymous Chat</h3>
                         <p className="text-xs text-gray-400">Chat anonymously with the poster</p>
                     </div>
 
-                    {/* Messages */}
+
                     <div className="flex-1 overflow-y-auto px-6 py-4 space-y-3">
                         {messages.length === 0 ? (
                             <p className="text-sm text-gray-400 text-center mt-10">
@@ -164,7 +164,7 @@ const PostDetail = () => {
                         <div ref={messagesEndRef} />
                     </div>
 
-                    {/* Input */}
+
                     <div className="px-6 py-4 border-t border-gray-100 flex gap-2">
                         <input
                             type="text"
@@ -187,7 +187,7 @@ const PostDetail = () => {
             {similarPosts.length > 0 && (
                 <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm p-6 mt-6">
                     <h3 className="text-base font-semibold text-gray-800 mb-4">
-                        🤖 AI Similar Items
+                        AI Similar Items
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
                         {similarPosts.map((match) => (
@@ -220,7 +220,7 @@ const PostDetail = () => {
             {nearbyMatches.length > 0 && (
                 <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm p-6 mt-6">
                     <h3 className="text-base font-semibold text-gray-800 mb-4">
-                        📍 Nearby {post.type === 'lost' ? 'Found' : 'Lost'} Items
+                        Nearby {post.type === 'lost' ? 'Found' : 'Lost'} Items
                     </h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
                         {nearbyMatches.map((match) => (

@@ -152,7 +152,6 @@ async function getNearbyMatches(req, res) {
     try {
         const { latitude, longitude, type } = req.query
 
-        // Find opposite type posts within 500m radius
         const oppositeType = type === 'lost' ? 'found' : 'lost'
 
         const query = `
@@ -190,7 +189,6 @@ async function getSimilarPosts(req, res) {
         if (!embedding) return res.status(200).json([])
 
         const similarPosts = await findSimilarPosts(embedding, pool)
-        // exclude the post itself
         const filtered = similarPosts.filter(p => p.id !== parseInt(id))
         res.status(200).json(filtered)
     } catch (error) {
