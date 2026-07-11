@@ -13,7 +13,7 @@ app.use(express.json());
 const cors = require('cors')
 
 app.use(cors({
-    origin: ['https://fyndhub.vercel.app', 'http://localhost:5173'],
+    origin: ['http://localhost:5173', 'https://fyndhub.vercel.app', /\.vercel\.app$/],
     credentials: true
 }))
 
