@@ -12,7 +12,6 @@ node_modules/
 .env.*
 
 # Firebase and sensitive credentials
-firebase-credentials.json
 backend/config/firebase-credentials.json
 **/*credentials*.json
 **/*secret*.json
