@@ -10,6 +10,7 @@ API.interceptors.request.use((req) => {
         req.headers.Authorization = `Bearer ${token}`;
     }
     return req;
+
 });
 
 export const register = (data) => API.post("/auth/register", data);
