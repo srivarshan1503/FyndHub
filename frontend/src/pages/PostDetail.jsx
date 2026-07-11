@@ -4,8 +4,7 @@ import { getPostById, getNearbyMatches, getSimilarPosts } from "../services/api"
 import { io } from "socket.io-client"
 import { Link } from "react-router-dom"
 
-const socket = io("http://localhost:5000")
-
+const socket = io('https://fyndhub.onrender.com')
 const PostDetail = () => {
     const { id } = useParams()
     const [post, setPost] = useState(null)
