@@ -124,7 +124,7 @@ async function searchPosts(req, res) {
         query += ` ORDER BY created_at DESC`;
         const result = await pool.query(query, params);
         if (result.rows.length == 0) {
-            return res.status(200).json({ message: "No posts found" });
+            return res.status(404).json({ message: "No posts found" });
         }
         res.status(200).json(result.rows);
     } catch (error) {
