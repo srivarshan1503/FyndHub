@@ -40,11 +40,18 @@ const PostDetail = () => {
     useEffect(() => {
         fetchPost()
         socket.emit('join_room', id)
+
+        socket.on('previous_messages', (msgs) => {
+            setMessages(msgs)
+        })
+
         socket.on('receive_message', (data) => {
             setMessages((prev) => [...prev, data])
         })
+
         return () => {
             socket.off('receive_message')
+            socket.off('previous_messages')
         }
     }, [id])
 
